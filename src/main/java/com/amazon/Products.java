@@ -26,7 +26,8 @@ public class Products extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.getRequestDispatcher("show-products.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("show-products.jsp");
+		dispatcher.forward(request, response);
 	
 	}
 
